@@ -1,10 +1,13 @@
 import { BrowserRouter } from 'react-router';
 import { createRoot } from 'react-dom/client';
-import './index.css';
+import NameProvider from './providers/NameProvider';
 import App from './routes/App.jsx';
+import './index.css';
 
 createRoot(document.getElementById('root')).render(
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>,
+	<NameProvider>
+		<BrowserRouter>
+			<App />
+		</BrowserRouter>
+	</NameProvider>,
 );
