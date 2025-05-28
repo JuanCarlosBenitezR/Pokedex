@@ -29,7 +29,7 @@ function Item({ url }) {
 			<h2 className="item__name">{pokemon.name}</h2>
 			<p className="item__types">
 				{pokemon.types.map((t) => (
-					<span key={t} className={'item__type type--${t.toLowerCase()}'}>
+					<span key={t} className={`item__type type--${t.toLowerCase()}`}>
 						{' '}
 						{t}
 					</span>

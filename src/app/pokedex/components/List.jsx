@@ -5,18 +5,15 @@ import Pagination from '../../../components/commons/Pagination';
 import './List.css';
 
 function List({ pokemons }) {
-	const { page, totalPages, items, prev, next, itemsPerPage } = usePagination(
-		pokemons,
-		20,
-	);
-	console.log('Items' + items.length);
+	const { pageItems, page, totalPages, next, prev, itemsPerPage } =
+		usePagination(pokemons, 20);
 
 	return (
 		<div className="list">
 			<div className="list__container">
 				<div className="list__content">
-					{items.map((pokemon) => (
-						<Link key={pokemon.name} to={`/pokemon/${pokemon.name}`}>
+					{pageItems.map((pokemon) => (
+						<Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>
 							<Item url={pokemon.url} />
 						</Link>
 					))}
@@ -26,7 +23,9 @@ function List({ pokemons }) {
 					<button>Anterior</button>
 					<button>Siguiente</button>
 				</div>
-				{items.length === 0 && <p className="list__empty">No hay resultados</p>}
+				{pageItems.length === 0 && (
+					<p className="list__empty">No hay resultados</p>
+				)}
 				{itemsPerPage < pokemons.length && (
 					<Pagination
 						page={page}
