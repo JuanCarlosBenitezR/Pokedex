@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router';
 import Home from '../app/home/Home';
 import Details from '../app/details/Details';
-import Pokedex from '../app/pokedex/pokedex';
+import Pokedex from '../app/pokedex/Pokedex';
 import Protected from './Protected';
 import Header from '../components/commons/Header';
 
