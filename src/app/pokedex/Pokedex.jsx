@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import List from './components/List';
 import Form from './components/Form';
-import './pokedex.css';
 
 const url = 'https://pokeapi.co/api/v2/pokemon?limit=649';
 function Pokedex() {
