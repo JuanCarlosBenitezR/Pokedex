@@ -21,12 +21,12 @@ function Form({ value, onSearch, type, onType, stock, onFiltered }) {
 				<input
 					type="text"
 					placeholder="Buscar"
-					className="form__input border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+					className="form__input border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
 					value={value}
 					onChange={(e) => onSearch(e.target.value)}
 				/>
 				<select
-					className="form__select border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+					className="form__select border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-red-500"
 					value={type}
 					onChange={(e) => onType(e.target.value)}
 				>

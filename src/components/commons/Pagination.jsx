@@ -1,22 +1,22 @@
 function Pagination({ page, totalPages, prev, next }) {
 	return (
-		<div className="display flex gap-10 justify-center align-center">
+		<div className="display flex gap-10 justify-center align-center my-5">
 			<button
 				onClick={prev}
 				disabled={page === 1}
-				className="px-5  font-bold text-black bg-lime-400 border-2 border-lime-600 rounded-full shadow-md hover:bg-lime-500 hover:shadow-lg transition transform hover:scale-105"
+				className="px-5 text-white bg-red-500 flex items-center justify-center w-25 h-15 rounded-full border-4 border-black hover:shadow-lg transition transform hover:scale-105"
 			>
-				prev
+				previo
 			</button>
-			<p className="text-lime-500 drop-shadow-md">
+			<p className="mx-2 font-bold text-black bg-yellow-200 rounded px-3 py-1 border-2 border-yellow-400 shadow">
 				{page} of {totalPages}
 			</p>
 			<button
 				onClick={next}
 				disabled={page === totalPages}
-				className="px-5  font-bold text-black bg-lime-400 border-2 border-lime-600 rounded-full shadow-md hover:bg-lime-500 hover:shadow-lg transition transform hover:scale-105"
+				className="px-5 text-white bg-red-500  flex items-center justify-center w-25 h-15 rounded-full border-4 border-black hover:shadow-lg transition transform hover:scale-105"
 			>
-				next
+				Siguiente
 			</button>
 		</div>
 	);

@@ -28,18 +28,24 @@ function Pokedex() {
 	);
 
 	return (
-		<div className="pokedex justify-center items-center flex flex-col">
-			<Form
-				stock={pokemons}
-				value={search}
-				type={type}
-				onSearch={setSearch}
-				onType={setType}
-				onFiltered={setTypeFiltered}
-			/>
+		<>
+			<div className="pokedex__header text-black p-4 text-center">
+				<p className="text-red-500 font-bold">Bienvenido {localStorage.name}</p>
+				<p>Busca y filtra tus Pokémon favoritos</p>
+			</div>
+			<div className="pokedex justify-center items-center flex flex-col">
+				<Form
+					stock={pokemons}
+					value={search}
+					type={type}
+					onSearch={setSearch}
+					onType={setType}
+					onFiltered={setTypeFiltered}
+				/>
 
-			<List pokemons={filteredPokemons} />
-		</div>
+				<List pokemons={filteredPokemons} />
+			</div>
+		</>
 	);
 }
 
