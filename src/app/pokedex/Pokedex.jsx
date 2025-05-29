@@ -28,7 +28,7 @@ function Pokedex() {
 	);
 
 	return (
-		<div className="pokedex">
+		<div className="pokedex justify-center items-center flex flex-col">
 			<Form
 				stock={pokemons}
 				value={search}

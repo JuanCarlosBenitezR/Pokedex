@@ -11,18 +11,14 @@ function List({ pokemons }) {
 	return (
 		<div className="list">
 			<div className="list__container">
-				<div className="list__content">
+				<div className="list__content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 					{pageItems.map((pokemon) => (
 						<Link key={pokemon.name} to={`/pokedex/${pokemon.name}`}>
 							<Item url={pokemon.url} />
 						</Link>
 					))}
 				</div>
-				{/* HACER LA PAGINACION POR SEPARADO */}
-				<div>
-					<button>Anterior</button>
-					<button>Siguiente</button>
-				</div>
+
 				{pageItems.length === 0 && (
 					<p className="list__empty">No hay resultados</p>
 				)}

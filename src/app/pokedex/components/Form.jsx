@@ -16,17 +16,17 @@ function Form({ value, onSearch, type, onType, stock, onFiltered }) {
 	}, [type, stock]);
 
 	return (
-		<div className="form">
-			<div className="form__container">
+		<div className="form mb-6">
+			<div className="form__container bg-white p-6 rounded-lg shadow-xl w-full max-w-sm mx-auto flex flex-col gap-4">
 				<input
 					type="text"
 					placeholder="Buscar"
-					className="form__input"
+					className="form__input border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
 					value={value}
 					onChange={(e) => onSearch(e.target.value)}
 				/>
 				<select
-					className="form__select"
+					className="form__select border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
 					value={type}
 					onChange={(e) => onType(e.target.value)}
 				>
