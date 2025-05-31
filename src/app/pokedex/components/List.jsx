@@ -12,8 +12,8 @@ function List({ pokemons }) {
 
 	return (
 		<div className="list">
-			<div>
-				Elementos a mostrar
+			<div className=" text-black p-4 ">
+				Elementos a mostrar:
 				<input
 					min={1}
 					max={649}

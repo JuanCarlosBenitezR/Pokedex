@@ -8,7 +8,7 @@ function Pagination({ page, totalPages, prev, next }) {
 			>
 				previo
 			</button>
-			<p className="mx-2 font-bold text-black bg-yellow-200 rounded px-3 py-1 border-2 border-yellow-400 shadow">
+			<p className="mx-2 font-bold text-black bg-yellow-200 rounded px-3 py-1 border-2 border-yellow-400 shadow text-center">
 				{page} of {totalPages}
 			</p>
 			<button

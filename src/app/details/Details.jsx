@@ -18,7 +18,7 @@ function Details() {
 
 	return (
 		<div className="details text-sm md:text-base lg:text-lg xl:text-xl ">
-			<div className="go-back">
+			<div className="go-back m-4">
 				<Link
 					to="/pokedex"
 					className="details__back text-red-500 font-bold hover:underline hover:text-red-700 ml-4 "
@@ -26,7 +26,10 @@ function Details() {
 					Volver a pokedex
 				</Link>
 			</div>
-			<div className="details__container flex flex-col items-center justify-center shadow-lg rounded-lg p-6  max-w-md mx-auto space-y-2">
+			<div
+				className="details__container flex flex-col items-center justify-center shadow-lg rounded-lg p-6 
+			 max-w-md mx-auto space-y-2 border border-gray-100 "
+			>
 				<div className="details__content">
 					<div className="details__image">
 						<img

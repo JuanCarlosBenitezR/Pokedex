@@ -39,7 +39,11 @@ function Item({ url }) {
 			</h2>
 			<p className="item__types">
 				{pokemon.types.map((t) => (
-					<span key={t} className={`item__type type--${t.toLowerCase()}`}>
+					<span
+						key={t}
+						className={`item__type type--${t.toLowerCase()} rounded-full px-3 py-1  mb-2 text-center 
+								font-semibold text-white bg-purple-600 capitalize mr-2`}
+					>
 						{' '}
 						{t}
 					</span>
