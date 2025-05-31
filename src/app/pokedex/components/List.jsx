@@ -3,13 +3,30 @@ import { Link } from 'react-router';
 import Item from './Item';
 import Pagination from '../../../components/commons/Pagination';
 import './List.css';
+import { useState } from 'react';
 
 function List({ pokemons }) {
+	const [elementsPerPage, setElementsPerPage] = useState(20);
 	const { pageItems, page, totalPages, next, prev, itemsPerPage } =
-		usePagination(pokemons, 20);
+		usePagination(pokemons, elementsPerPage);
 
 	return (
 		<div className="list">
+			<div>
+				Elementos a mostrar
+				<input
+					min={1}
+					type="number"
+					value={elementsPerPage}
+					onChange={(e) => {
+						setElementsPerPage(e.target.value);
+						if (value > 0) {
+							usePagination(pokemons, value);
+						}
+					}}
+					className="ml-2 p-1 border border-gray-300 rounded"
+				/>
+			</div>
 			<div className="list__container  flex flex-col items-center">
 				<div className="list__content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 					{pageItems.map((pokemon) => (
