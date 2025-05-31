@@ -16,6 +16,7 @@ function List({ pokemons }) {
 				Elementos a mostrar
 				<input
 					min={1}
+					max={649}
 					type="number"
 					value={elementsPerPage}
 					onChange={(e) => {
